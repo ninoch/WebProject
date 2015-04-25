@@ -1,0 +1,39 @@
+
+#main_block {
+	float: left;
+	width: 75%;
+	padding: 20px;
+	border: solid 1px #2B547E;
+	border-radius: 5px;
+	margin-left: 2%;
+	background-color: rgba(255, 255, 255, 0.45);
+}
+
+.user_profile {
+	float: left;
+	width: 30%;
+	/* border: solid 1px #2B547E; */
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.user_posts {
+	float: right;
+	width: 68%;
+	border: solid 1px #2B547E;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+img {
+	float: none;
+	width: 100%;
+	height: 100%;
+	border: solid 1px #2B547E;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#user_action {
+	float: right;
+}

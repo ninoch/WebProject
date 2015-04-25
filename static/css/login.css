@@ -1,0 +1,158 @@
+
+#login_form{
+	position: absolute;
+    opacity: 0.9;
+    background-color: #D3D3D3;
+}
+
+#forget_pass{
+	position: absolute;
+    opacity: 0.9;
+    background-color: #D3D3D3;	
+}
+
+#sign_up{
+	opacity: 0.9;
+	background-color: #D3D3D3;
+	width: 600px;	
+	margin: 100px auto;
+}
+
+#flip_container{
+	/*position: relative;*/
+	margin: 100px auto;
+    z-index: 1;
+    perspective: 1000;
+}
+
+#flip_container, .front, .back {
+	width: 300px;
+}
+
+/*
+#flip_container:hover #fliper, #flip_container.hover #fliper {
+	transform: rotateY(180deg);
+}
+*/
+#flip_container:target #fliper {
+  transform: rotateY(180deg);
+}
+
+
+#fliper {
+	transition: 1.5s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front, .back{
+	width: 300px;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+
+/*disable scroll*/
+body, html{
+	overflow-x: hidden; 
+    overflow-y: auto;
+}
+body{
+	background-image: url("../img/watch-movie.jpg") ;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+#buttons{
+	/*margin-left: 35px;*/
+	margin-left: 15%;
+}
+
+#errors{
+	text-align: center;
+}
+
+/*for calender*/
+/*
+.date-entry {
+  margin: 0;
+  outline: 0;
+  font-size: 1em;
+  padding: .65em 1em;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  border-radius: 0.3125em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  transition: background-color .3s ease-out,box-shadow .2s ease,border-color .2s ease;
+}
+.date-entry:focus {
+  color: rgba(0, 0, 0, 0.85);
+  border-color: rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  box-shadow: 0.3em 0 0 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.button {
+  position: relative;
+  left: -8px;
+  top: -1px;
+  height: 42px;
+  width: 50px;
+  padding: 13px 0 0 8px !important;
+  border-radius: 0 5px 5px 0 !important;
+}
+.calender {
+  position: relative;
+  top: -12px;
+  left: 30px;
+  height: 200px;
+  width: 220px;
+  padding: 5px;
+  background-color: #fff;
+}
+.month {
+  color: #777;
+  position: absolute;
+  margin: 12px 0;
+  margin-left: -5px;
+  top: 0;
+}
+.weekdays > .column {
+  color: #777;
+  margin: 2px !important;
+  width: 25px !important;
+  text-align: center !important;
+}
+.days > .column {
+  color: #777;
+  margin: 2px !important;
+  width: 25px !important;
+  text-align: center !important;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.days > .column:hover {
+  transition: all 0.3s ease;
+  color: #fff;
+  background-color: #777;
+}
+.day {
+  font-size: 0.7em;
+  padding: 0 !important;
+}
+*/

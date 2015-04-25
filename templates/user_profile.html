@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block css %}
+    {{ block.super }}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock %}
+
+{% block body %}
+	<article id ="main_block">
+		<div class="user_profile">
+			<h3>
+				<i class="browser icon"></i>
+				Merlion
+			</h3>
+			<img src = "{% static 'img/milad.jpg' %}" />
+			<div class="ui raised segment">
+				<h4>
+				<i class="info circle icon"></i>
+				Personal Info
+				<p></p>
+				</h4>
+
+				<a class="ui teal ribbon label">
+					<i class="user icon"></i>
+					Full Name
+				</a>
+				<span>Milad Asgari </span>
+				<p></p>
+
+				<a class="ui teal ribbon label">
+					<i class="birthday icon"></i>
+					Birthday
+				</a>
+				<span> 20 January 1993 </span>
+				<p></p>
+
+
+				<a class="ui teal ribbon label">
+					<i class="mail icon"></i>
+					Email
+				</a>
+				<span> merlion380@gmail.com  </span>
+				<p></p>
+
+				<a class="ui teal ribbon label">
+					<i class="pointing right icon"></i>
+					Followers
+				</a>
+				<span> <a href="#"> 259 </a> </span>
+				<p></p>
+
+				<a class="ui teal ribbon label">
+					<i class="pointing left icon"></i>
+					Following
+				</a>
+				<span> <a href="#"> 259 </a> </span>
+				<p></p>
+
+				<a href="#">
+					<div id = "user_action" class="circular ui teal icon button">
+							<i class="icon plus"></i>
+							<!--
+							<i class ="icon remove"></i>
+							<i class ="icon settings"></i>
+							-->
+					</div>
+				</a>
+
+			</div>
+		</div>
+		<div class="user_posts">
+			posts here
+		</div>
+	</article>
+{% endblock %}
