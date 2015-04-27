@@ -200,13 +200,17 @@
 				      <input id="passwordConfirm" type="password">
 				    </div>
 
-				    <button class="ui teal button">Sign Up!</button>
+                    <div id="buttons_signup" class="ui buttons">
+					  <div class="ui red button">Back</div>
+					  <div class="or"></div>
+					  <div class="ui teal button">Sign Up!</div>
+					</div>
 				    <div class="ui error message"></div>
 			  	</form>  
 			</div>
 		</div>	
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+		<script src="{% static 'lib/Semantic/dist/jquery.js' %}"></script>
+		<script src="{% static 'lib/Semantic/dist/jquery.address.min.js' %}"></script>
 		<script src="{% static 'lib/Semantic/dist/semantic.js' %}"></script>
 		<script>
 			$('.ui.dropdown').dropdown();

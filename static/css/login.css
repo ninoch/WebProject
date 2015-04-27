@@ -74,10 +74,16 @@ body{
 
 }
 
-#buttons{
+#buttons_login{
 	/*margin-left: 35px;*/
 	margin-left: 15%;
 }
+
+/*
+#buttons_signup{
+    margin-left: 35%;
+}
+*/
 
 #errors{
 	text-align: center;
