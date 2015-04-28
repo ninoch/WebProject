@@ -64,15 +64,15 @@
 			</div>
 			<div  class="ui bottom attached segment">
 			    <div id="decider" class="ui inverted labeled icon right inline vertical sidebar menu">
-			      	<a class="active item">
+			      	<a id="chat_select" class="active item">
 						<i class="comments icon"></i>
 						Chat
 					</a>
-					<a class="item">
+					<a id="users_select" class="item">
 						<i class="users icon"></i>
 						Users
 					</a>
-					<a class="item">
+					<a id="movies_select" class="item">
 						<i style="active:true" class="film icon"></i>
 						Movies
 					</a>
@@ -83,7 +83,7 @@
                         <h3 class="ui header">Application Content</h3>
 						<p></p>
 						<p></p>
-                        <div class="ui relaxed list">
+                        <div id="chats" class="ui relaxed list">
 						  <div class="item">
 							<img class="ui avatar image" src="{% static 'img/Nazanin.jpg' %}">
 							<div class="content">
@@ -123,6 +123,56 @@
 							</div>
 						  </div>
 						</div>
+                        <div id="people" class="ui special cards">
+						  <div class="card">
+							<div class="dimmable image">
+							  <div class="ui dimmer">
+								<div class="content">
+								  <div class="center">
+									<div class="ui inverted button blue">Follow</div>
+								  </div>
+								</div>
+							  </div>
+							  <img src="{% static 'img/Nazanin.jpg' %}">
+							</div>
+							<div class="content">
+							  <a class="header">Nazanin AlipourFard</a>
+							  <div class="meta">
+								<span class="date">Create in Sep 2014</span>
+							  </div>
+							</div>
+							<div class="extra content">
+							  <a>
+								<i class="users icon"></i>
+								1 Follower
+							  </a>
+							</div>
+						  </div>
+                          <div class="card">
+							<div class="dimmable image">
+							  <div class="ui dimmer">
+								<div class="content">
+								  <div class="center">
+									<div class="ui inverted button blue">Follow</div>
+								  </div>
+								</div>
+							  </div>
+							  <img src="{% static 'img/Milad.jpg' %}">
+							</div>
+							<div class="content">
+							  <a class="header">Milad Asgari</a>
+							  <div class="meta">
+								<span class="date">Create in Sep 2014</span>
+							  </div>
+							</div>
+							<div class="extra content">
+							  <a>
+								<i class="users icon"></i>
+								1 Follower
+							  </a>
+							</div>
+						  </div>
+						</div>
 					</div>
 			    </div>
 			</div>
@@ -138,6 +188,9 @@
 		<script src="{% static 'lib/Semantic/dist/semantic.js' %}"></script>
 		<script>
 			$('.ui.dropdown').dropdown();
+			$('.special.cards .image').dimmer({
+			  on: 'hover'
+			});
 		</script>
 		<script>
 			// showing multiple
@@ -148,6 +201,24 @@
 			  })
 			  .sidebar('attach events', '#menu_decider .item')
 			;
+			$('#movies').hide();
+            $('#people').hide();
+            $('#users_select').click(function(){
+				$('#chats').hide();
+                $('#movies').hide();
+                 $('#people').fadeIn(300);
+            });
+            $('#chat_select').click(function(){
+				$('#people').hide();
+                $('#movies').hide();
+                 $('#chats').fadeIn(300);
+            });
+            $('#movies_select').click(function(){
+				$('#chats').hide();
+                $('#people').hide();
+                 $('#movies').fadeIn(300);
+            });
+        	//$("#chat_select").sidebar('attach events', '#movies');
 		</script>
 		{% endblock %}
 	</body>
