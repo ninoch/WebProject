@@ -102,11 +102,12 @@
 		</script>
 		<script>
 			// showing multiple
-			$('.ui.sidebar')
+
+            $('.ui.sidebar')
 			  .sidebar({
 			    context: $('.bottom.segment')
 			  })
-			  .sidebar('attach events', '.menu .item')
+			  .sidebar('attach events', '#menu_decider .item')
 			;
 		</script>
 		{% endblock %}
