@@ -40,7 +40,16 @@ body {
 	background-color: rgba(255, 255, 255, 0.45);
 }
 
-.image_size{
-	width: 10%;
-	height: 10%;
+#movies .content{
+	width: 80%;
+	height: 80%;
+	text-align: center;
+	margin: 0 auto;
+}
+#movies .ui.blue.segment{
+	width: 90%;
+	margin: 0 auto;
+}
+#movies img.image{
+	border-radius: 5px;
 }
