@@ -11,3 +11,11 @@ p {
 #follow {
     width: 100%;
 }
+
+#unfollow {
+    width: 100%;
+}
+
+.likeThis {
+    float: right;
+}

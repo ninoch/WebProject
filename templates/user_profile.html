@@ -10,6 +10,7 @@
 {% block js %}
     {{ block.super }}
     <script>
+        $('.ui.rating').rating();
     	$('#unfollow').hide();
         $('.ui.modal').modal({
             detachable: false
@@ -40,10 +41,16 @@
         });
 
     	$('.addComment').click(function(event){
-            var txt = $(this).prev().children(':first').val();
+            var txt = $(this).prev().children().eq(0).val();
             if(txt != "") {
 				var blk = '<div class="comment"> <a class="avatar"> <img src="{% static 'img/anon.png' %}"> </a> <div class="content"> <a class="author"> You </a> <div class="metadata"> <span class="date">Just now</span> </div> <div class="text">'.concat(txt, '</div></div></div>');
             	$(this).parent().before(blk);
+                var cmn = $(this).parent().parent().prev().prev().children().eq(0).html();
+            	var num = parseInt(cmn.split(' ')[0], 10);
+            	num ++;
+            	cmn = num + " Comments";
+                $(this).parent().parent().prev().prev().children().eq(0).html(cmn);
+            	$(this).prev().children().eq(0).val("");
         	}
             /*
             HERE FOR MILAD :D
@@ -51,6 +58,19 @@
                 $(this).prev().children(':first').prompt("khar");
             }
             */
+        });
+    	$('.likeThis').click(function(event){
+			var blk = $(this).parent().parent().children().eq(3).children().eq(1).children().eq(0).html();
+            var num = parseInt(blk.split(' ')[0], 10);
+            if($(this).rating('get rating') == 1){
+                num++;
+            }
+            else {
+                num--;
+            }
+            console.log(num);
+            blk = num + " Likes";
+            $(this).parent().parent().children().eq(3).children().eq(1).children().eq(0).html(blk);
         });
     </script>
 {% endblock %}
@@ -127,15 +147,19 @@
 				<img src="{% static 'img/TheImitationGame.jpg'%}">
 			</div>
 			<div class="content">
-				<a class="header">
+				<h2 class="header">
                     The Imitation Game
+
+                    <div class="ui huge star rating likeThis" data-rating="0" data-max-rating="1"></div>
+
                     <br/>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="half empty star icon"></i>
-                </a>
+
+                </h2>
 				<div class="meta">
 					<span>28 April 2015 at 10:48 PM</span>
 				</div>
@@ -144,13 +168,13 @@
                         This suspenseful drama reveals pieces of its puzzle steadily and slowly, until the final heartrending picture can be seen at last. Remarkably, it comes from a screenwriter who had never had a feature film produced and a director who had never made one in English.
                     </p>
 				</div>
-				<a href ="#" class="extra">
+				<div class="extra">
                     <a class="showComments">
-						0 Comments
+						<span>0 Comments</span>
                     	<i class ="icon comment"></i>
                     </a>
                     <a class="showLikes">
-                    	0 Likes
+                    	<span>0 Likes</span>
                     	<i class="icon thumbs up"></i>
                     </a>
                     <!-- Comments -->
@@ -181,7 +205,7 @@
                         <div class="actions">
             			</div>
 					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 
@@ -192,15 +216,18 @@
 				<img src="{% static 'img/SherlockHolmes.jpg'%}">
 			</div>
 			<div class="content">
-				<a class="header">
+				<h2 class="header">
                     Adventures of Sherlock Holmes
+
+                    <div class="ui huge star rating likeThis" data-rating="0" data-max-rating="1"></div>
+
                     <br/>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
-                </a>
+                </h2>
 				<div class="meta">
 					<span>20 April 2015 at 09:50 AM</span>
 				</div>
@@ -209,13 +236,13 @@
                         Basil Rathbone is still probably the best-known Sherlock Holmes, courtesy of his old movies being shown forever on television. But Jeremy Brett is giving the old boy a close chase. For several seasons now, Mr. Brett has been evoking Arthur Conan Doyle's world-renowned detective on public television's ''Mystery'' with an increasingly neurotic reading that may leave a good many Baker Street Irregulars uneasy. But few will be able to deny that the interpretation is diabolically authentic and, yes, memorable.
                     </p>
 				</div>
-				<a href ="#" class="extra">
+				<div href ="#" class="extra">
                     <a class ="showComments">
-						3 Comments
+						<span>3 Comments</span>
                     	<i class ="icon comment"></i>
                     </a>
                     <a class="showLikes">
-                    	4 Likes
+                    	<span>4 Likes</span>
                     	<i class="icon thumbs up"></i>
 					</a>
                     <!-- Comments -->
@@ -316,7 +343,7 @@
 							</div>
 						</div>
 					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 
@@ -327,15 +354,18 @@
 				<img src="{% static 'img/MonstersInc.jpg'%}">
 			</div>
 			<div class="content">
-				<a class="header">
+				<h2 class="header">
                     Monsters University
+
+                    <div class="ui huge star rating likeThis" data-rating="0" data-max-rating="1"></div>
+
                     <br/>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="empty star icon"></i>
-                </a>
+                </h2>
 				<div class="meta">
 					<span>10 April 2015 at 02:05 PM</span>
 				</div>
@@ -344,12 +374,13 @@
                         It’s easily the most enjoyable animated film so far this year, one that is visually stunning, wickedly subversive, incredibly funny (Day's character is a hoot), and (at times) lump-in-your-throat emotional.
                     </p>
 				</div>
-				<a class="extra">
-                    <a class ="showComments"> 2 Comments
+				<div class="extra">
+                    <a class ="showComments">
+                        <span>2 Comments</span>
                     	<i class ="icon comment"></i>
                     </a>
                     <a class ="showLikes">
-                        3 Likes
+                        <span>3 Likes</span>
                     	<i class="icon thumbs up"></i>
                     </a>
 
@@ -426,7 +457,7 @@
 							</div>
 						</div>
 					</div>
-				</a>
+				</div>
 			</div>
 		</div>
     </div>
