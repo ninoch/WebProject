@@ -1,0 +1,19 @@
+.infoLabel{
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+#comment {
+    float: right;
+    width: 75%;
+}
+
+#movie_pic {
+    float: left;
+    width: 24%;
+    border-radius: 2px;
+    border: 2px solid #000000;
+    padding: 0px;
+    margin: 0px;
+}

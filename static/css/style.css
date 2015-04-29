@@ -24,6 +24,10 @@ body {
 	/* background-color: rgba(0, 181, 173, 0.3); */
 }
 
+#decider{
+	background-color: #2B547E;
+}
+
 .ui.my.inverted.menu {
 	background-color: #2B547E;
 	left: 0px;
@@ -49,17 +53,29 @@ body {
 #movies .ui.blue.segment{
 	width: 90%;
 	margin: 0 auto;
+	/*height: 300px;*/
 }
 #movies img.image{
 	border-radius: 5px;
+	height: 180px;
+}
+
+.chat_window{
+	height: 200px;
+	width: 150px;
+	z-index: 49;
+	background-color: #b2b2b2;
+}
+/*
+.my_card .content{
+	position: relative;
+}
+.my_card .extra.content{
+	position: relative;
 }
 
 #people .my_card{
-
-}
-/*
-.card.my_card{
-	width: 80%;
-	height: 100px;
+	height: 80px;
+	width: 800px;
 }
 */

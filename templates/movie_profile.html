@@ -1,0 +1,275 @@
+{% extends "profile.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+
+{% block css %}
+    {{ block.super }}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/movie_profile.css' %}">
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script>
+        $('.ui.rating').rating();
+        $('#openModal').click(function(event) {
+            $(".ui.modal").modal("show");
+            $('#openModal').rating('disable');
+        });
+        /*
+        $('#openModal').onclick(function(event) {
+            $(".ui.modal").modal("show");
+        });
+*/
+    </script>
+{% endblock %}
+
+{% block body %}
+    {{ block.super }}
+{% endblock %}
+
+{% block info %}
+	<img src = "{% static 'img/TheImitationGame.jpg' %}" />
+	<div class="ui raised segment">
+		<h4>
+		<i class="info circle icon"></i>
+		movie Info
+		<p></p>
+		</h4>
+
+		<a class="ui teal ribbon label">
+			<i class="film icon"></i>
+            Name
+		</a>
+		<p class="infoLabel">
+            The Imitation Game
+        </p>
+
+		<a class="ui teal ribbon label">
+			<i class="calendar icon"></i>
+            Release year
+		</a>
+		<p class="infoLabel">
+            2014
+        </p>
+
+
+		<a class="ui teal ribbon label">
+			<i class="user icon"></i>
+			Director
+		</a>
+		<p class="infoLabel">
+            Morten Tyldum
+        </p>
+
+        <a class="ui teal ribbon label">
+			<i class="star icon"></i>
+			Your Rating
+		</a>
+
+		<p class="infoLabel">
+            <div id="openModal" class="ui large rating" data-rating="0" data-max-rating="5"></div>
+		</p>
+
+        <div class="ui modal">
+            <i class="close icon"></i>
+            <div class="header">
+                <i class="film icon"></i>
+                The Imitation Game
+                <div class="ui huge rating" data-rating="4" data-max-rating="5"></div>
+            </div>
+            <div class="content">
+                <img id = "movie_pic" src="{% static 'img/TheImitationGame.jpg' %}" />
+                <form id = "comment" class="ui reply form">
+                    <div class="field">
+                        <textarea placeholder="Write Your Comment here ..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="actions">
+                <div id="buttons" class="ui large buttons">
+					  <div class="ui teal button">Cancel</div>
+					  <div class="or"></div>
+					  <div class="ui teal button">Add</div>
+				</div>
+            </div>
+        </div>
+
+        <!--
+		<a class="ui teal ribbon label">
+			<i class="star empty icon"></i>
+			Your Rating
+		</a>
+        <p>
+            <i class="star empty icon"></i>
+            <i class="star empty icon"></i>
+            <i class="star empty icon"></i>
+            <i class="star empty icon"></i>
+            <i class="star empty icon"></i>
+        </p>
+        -->
+
+	</div>
+{% endblock %}
+{% block moreinfo %}
+    <div>
+        <h3>
+		    <i class="film icon"></i>
+            The Imitation Game
+        </h3>
+
+        <hr/>
+
+        <h5>
+		    <i class="newspaper icon"></i>
+            Summary:
+        </h5>
+        <p>
+        During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.
+        </p>
+
+        <h5>
+            <i class="star icon"></i>
+            Rating
+        </h5>
+
+        <table class="ui basic table">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Number of reviewers:
+                    </td>
+                    <td>
+                        243
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Average Rating:
+                    </td>
+                    <td>
+                        <i class="star icon"></i>
+                        <i class="star icon"></i>
+                        <i class="star icon"></i>
+                        <i class="star icon"></i>
+                        <i class="star half empty icon"></i>
+                        ( 8.6 / 10 )
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5>
+		    <i class="list layout icon"></i>
+            More Information
+        </h5>
+        <table class="ui basic table">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Writers:</td>
+                    <td>
+                        <div class="ui list">
+                            <div class="item">
+                                Graham Moore
+                            </div>
+                            <div class="item">
+                               Andrew Hodges
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Starring:</td>
+                    <td>
+                        <div class="ui list">
+                            <div class="item">
+                                Benedict Cumberbatch
+                            </div>
+                            <div class="item">
+                                Keira Knightley
+                            </div>
+                            <div class="item">
+                                Matthew Goode
+                            </div>
+
+                            <div class="item">
+                                Rory Kinnear
+                            </div>
+
+                            <div class="item">
+                                Charles Dance
+                            </div>
+
+                            <div class="item">
+                                Mark Strong
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td> Country: </td>
+                    <td>
+                        United States
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Language:
+                    </td>
+                    <td>
+                        English
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--
+    <div class="ui comments">
+        <h3 class="ui dividing header">Your Comments</h3>
+        <div class="comment">
+            <a class="avatar">
+                <img src="{% static 'img/milad.jpg' %}">
+            </a>
+            <div class="content">
+                <a class="author">Merlion</a>
+                <div class="metadata">
+                    <span class="date">Today at 5:42PM</span>
+                </div>
+                <div class="text">
+                    How artistic!
+                </div>
+            </div>
+        </div>
+
+        <div class="comment">
+            <a class="avatar">
+                <img src="{% static 'img/milad.jpg' %}">
+            </a>
+            <div class="content">
+                <a class="author">Merlion</a>
+                <div class="metadata">
+                    <span class="date">28 April 2015 at 4:20 PM</span>
+                </div>
+                <div class="text">
+                    I like this movie! ^_^
+                </div>
+            </div>
+        </div>
+        <form class="ui reply form">
+            <div class="field">
+                <textarea></textarea>
+            </div>
+            <div class="ui teal labeled submit icon button">
+                <i class="icon edit"></i> Add Comment
+            </div>
+        </form>
+    </div>
+    -->
+{% endblock %}

@@ -1,0 +1,13 @@
+p {
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+#user_action {
+	float: right;
+}
+
+#follow {
+    width: 100%;
+}
