@@ -66,6 +66,16 @@ body {
 	z-index: 49;
 	background-color: #b2b2b2;
 }
+
+.ui.one.cards > .blue.card.my_card {
+  	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.blue.card.my_card .dimmable.image > img{
+	height: 110px;
+}
 /*
 .my_card .content{
 	position: relative;

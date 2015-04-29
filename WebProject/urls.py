@@ -13,5 +13,6 @@ urlpatterns = patterns('',
     url(r'^login/$', TemplateView.as_view(template_name='login.html'), name='login'),
     url(r'^signup/$', TemplateView.as_view(template_name='signup.html'), name='signup'),
     url(r'^user_profile/$', TemplateView.as_view(template_name='user_profile.html')),
+    url(r'^movie_profile/$', TemplateView.as_view(template_name='movie_profile.html')),
 
 )
