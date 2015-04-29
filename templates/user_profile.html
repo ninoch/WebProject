@@ -10,40 +10,48 @@
 {% block js %}
     {{ block.super }}
     <script>
+    	$('#unfollow').hide();
+        $('.ui.modal').modal({
+            detachable: false
+        });
     	$('.ui.comments').hide();
     	$('.showComments').click( function(event) {
             var blk = $(this).next().next();
-            console.log(blk);
         	if(blk.is(':visible')) {
                 blk.hide('slow');
             }
             else {
                 blk.show('slow');
-                $("html, body").animate({ scrollTop:  $(blk).offset().top }, "slow");
+                $("html, body").animate({ scrollTop: $(this).offset().top - 40 }, "slow");
             }
         });
     	$('.showLikes').click(function(event) {
             var blk = $(this).next().next();
-            blk.dimmer('distroy');
-            console.log(blk);
             blk.modal("show");
         });
 
     	$('#follow').click(function(event){
-            console.log($("#follow").getText());
-            if($('#follow') == "Follow") {
-                $("#follow").text('value', 'Unfollow');
-            }
-            else
-            	$('#follow').setValue('Follow');
+            $('#follow').hide();
+            $('#unfollow').show();
         });
-    	$('.addComment').click(function(event){
-            var txt = $(this);
-            console.log($(this));
-            console.log($(this).prev());
-            console.log($(this).prev().childList());
+    	$('#unfollow').click(function(event){
+            $('#unfollow').hide();
+            $('#follow').show();
         });
 
+    	$('.addComment').click(function(event){
+            var txt = $(this).prev().children(':first').val();
+            if(txt != "") {
+				var blk = '<div class="comment"> <a class="avatar"> <img src="{% static 'img/anon.png' %}"> </a> <div class="content"> <a class="author"> You </a> <div class="metadata"> <span class="date">Just now</span> </div> <div class="text">'.concat(txt, '</div></div></div>');
+            	$(this).parent().before(blk);
+        	}
+            /*
+            HERE FOR MILAD :D
+            else {
+                $(this).prev().children(':first').prompt("khar");
+            }
+            */
+        });
     </script>
 {% endblock %}
 
@@ -56,7 +64,7 @@
 		<i class="browser icon"></i>
 		Merlion
 	</h3>
-	<img src = "{% static 'img/Milad.jpg' %}" />
+	<img src = "{% static 'img/milad.jpg' %}" />
 	<div class="ui raised segment">
 		<h4>
 		<i class="info circle icon"></i>
@@ -99,6 +107,10 @@
         <div id ="follow" class="ui teal button">
             <i class="plus icon"></i>
                   Follow
+        </div>
+    	<div id ="unfollow" class="ui red button">
+            <i class="minus icon"></i>
+                  Unfollow
         </div>
 
 	</div>

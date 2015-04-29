@@ -67,6 +67,7 @@ body {
 	background-color: #b2b2b2;
 }
 
+/*for size of friend suggestion*/
 .ui.one.cards > .blue.card.my_card {
   	width: 60%;
 	margin: 0 auto;
@@ -76,16 +77,4 @@ body {
 .blue.card.my_card .dimmable.image > img{
 	height: 110px;
 }
-/*
-.my_card .content{
-	position: relative;
-}
-.my_card .extra.content{
-	position: relative;
-}
-
-#people .my_card{
-	height: 80px;
-	width: 800px;
-}
-*/
+/******************************/
