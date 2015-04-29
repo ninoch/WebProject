@@ -80,9 +80,6 @@
 
 			    <div id="sidebarmenu_content" class="pusher">
 					<div class="ui basic segment">
-                        <h3 class="ui header">Application Content</h3>
-						<p></p>
-						<p></p>
                         <div id="chats" class="ui relaxed list">
 						  <div class="item">
 							<img class="ui avatar image" src="{% static 'img/Nazanin.jpg' %}">
@@ -124,7 +121,7 @@
 						  </div>
 						</div>
                         <div id="people" class="ui special cards">
-						  <div class="card">
+						  <div class="card my_card">
 							<div class="dimmable image">
 							  <div class="ui dimmer">
 								<div class="content">
@@ -148,7 +145,7 @@
 							  </a>
 							</div>
 						  </div>
-                          <div class="card">
+                          <div class="card my_card">
 							<div class="dimmable image">
 							  <div class="ui dimmer">
 								<div class="content">
@@ -206,17 +203,20 @@
             $('#users_select').click(function(){
 				$('#chats').hide();
                 $('#movies').hide();
-                 $('#people').fadeIn(300);
+                $('#people').fadeIn(500);
+                $('.ui.sidebar').sidebar('pull page');
             });
             $('#chat_select').click(function(){
 				$('#people').hide();
                 $('#movies').hide();
-                 $('#chats').fadeIn(300);
+                $('#chats').fadeIn(500);
+                $('.ui.sidebar').sidebar('pull page');
             });
             $('#movies_select').click(function(){
 				$('#chats').hide();
                 $('#people').hide();
-                 $('#movies').fadeIn(300);
+                $('#movies').fadeIn(500);
+                $('.ui.sidebar').sidebar('pull page');
             });
         	//$("#chat_select").sidebar('attach events', '#movies');
 		</script>
