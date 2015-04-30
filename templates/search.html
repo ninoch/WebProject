@@ -24,7 +24,7 @@
             following = parseInt(following);
             following ++;
             console.log(following);
-            var news ='<a><i class="users icon"></i> '.concat(following, ' Follower</a>');
+            var news ='<a><i class="users icon"></i> '.concat(following, ' Follower </a>');
             $(this).parent().parent().parent().parent().next().next().children().remove();
             $(this).parent().parent().parent().parent().next().next().append(news);
             $(this).removeClass('blue').addClass('red').text('Unfollow');
@@ -34,7 +34,7 @@
             following = parseInt(following);
             following --;
             console.log(following);
-            var news ='<a><i class="users icon"></i> '.concat(following, ' Follower</a>');
+            var news ='<a><i class="users icon"></i> '.concat(following, ' Follower </a>');
             $(this).parent().parent().parent().parent().next().next().children().remove();
             $(this).parent().parent().parent().parent().next().next().append(news);
             $(this).removeClass('red').addClass('blue').text('Follow');
