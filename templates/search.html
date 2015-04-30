@@ -20,21 +20,24 @@
     <script>
         $('.special.cards .image').dimmer({ on: 'hover'});
         $(document).on("click" ,".ui.inverted.button.blue",function(){
-            var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).text();
+            var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).children().eq(2).text();
+            var age = $(this).parent().parent().parent().parent().next().next().children().eq(0).children().eq(0).text();
+            //console.log(age);
             following = parseInt(following);
             following ++;
             console.log(following);
-            var news ='<a><i class="users icon"></i> '.concat(following, ' Follower </a>');
+            var news ='<a><h6 class="ui tiny purple header">'.concat(age,'</h6><i class="users icon"></i><span> '.concat(following, ' Follower </span></a>'));
             $(this).parent().parent().parent().parent().next().next().children().remove();
             $(this).parent().parent().parent().parent().next().next().append(news);
             $(this).removeClass('blue').addClass('red').text('Unfollow');
         });
         $(document).on("click", ".ui.inverted.button.red",function(){
-            var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).text();
+            var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).children().eq(2).text();
+            var age = $(this).parent().parent().parent().parent().next().next().children().eq(0).children().eq(0).text();
             following = parseInt(following);
             following --;
             console.log(following);
-            var news ='<a><i class="users icon"></i> '.concat(following, ' Follower </a>');
+            var news ='<a><h6 class="ui tiny purple header">'.concat(age,'</h6><i class="users icon"></i><span> '.concat(following, ' Follower </span></a>'));
             $(this).parent().parent().parent().parent().next().next().children().remove();
             $(this).parent().parent().parent().parent().next().next().append(news);
             $(this).removeClass('red').addClass('blue').text('Follow');
@@ -120,12 +123,12 @@
                 </div>
                 <div class="content">
                   <a class="header">Nazanin AlipourFard</a>
-                  <div class="header">23 Years</div>
                 </div>
                 <div class="extra content">
                   <a>
+                    <h6 class="ui tiny purple header">23 Years</h6>
                     <i class="users icon"></i>
-                    15 Follower
+                    <span>15 Follower</span>
                   </a>
                 </div>
               </div>
@@ -145,8 +148,9 @@
                 </div>
                 <div class="extra content">
                   <a>
+                    <h6 class="ui tiny purple header">23 Years</h6>
                     <i class="users icon"></i>
-                    1 Follower
+                    <span>1 Follower</span>
                   </a>
                 </div>
               </div>
@@ -166,8 +170,9 @@
                 </div>
                 <div class="extra content">
                   <a>
+                    <h6 class="ui tiny purple header">23 Years</h6>
                     <i class="users icon"></i>
-                    12 Follower
+                    <span>12 Follower</span>
                   </a>
                 </div>
               </div>
@@ -187,8 +192,9 @@
                 </div>
                 <div class="extra content">
                   <a>
+                    <h6 class="ui tiny purple header">25 Years</h6>
                     <i class="users icon"></i>
-                    1 Follower
+                    <span>1 Follower</span>
                   </a>
                 </div>
               </div>
@@ -208,8 +214,9 @@
                 </div>
                 <div class="extra content">
                   <a>
+                    <h6 class="ui tiny purple header">23 Years</h6>
                     <i class="users icon"></i>
-                    1 Follower
+                    <span>1 Follower</span>
                   </a>
                 </div>
               </div>
@@ -229,8 +236,9 @@
                 </div>
                 <div class="extra content">
                   <a>
+                    <h6 class="ui tiny purple header">23 Years</h6>
                     <i class="users icon"></i>
-                    1 Follower
+                    <span>1 Follower</span>
                   </a>
                 </div>
               </div>
@@ -250,8 +258,9 @@
                 </div>
                 <div class="extra content">
                   <a>
+                    <h6 class="ui tiny purple header">23 Years</h6>
                     <i class="users icon"></i>
-                    1 Follower
+                    <span>1 Follower</span>
                   </a>
                 </div>
               </div>
