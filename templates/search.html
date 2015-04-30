@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block css %}
+    {{ block.super }}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script>
+        $('#main_block .menu .item').tab();
+    </script>
+;
+{% endblock %}
+
+{% block body %}
+    <article id = "main_block">
+        <div class="ui top attached tabular menu">
+            <a class="active item" data-tab="first">Movies</a>
+            <a class="item" data-tab="second">Users</a>
+        </div>
+        <div class="ui bottom attached active tab segment" data-tab="first">
+            <div class="ui floating blue large message">
+              <p>2 matches result found</p>
+            </div>
+             <div class="ui divided items">
+                <div class="item">
+                    <a class="ui small image">
+                      <img src = "{% static 'img/TheImitationGame.jpg' %}" />
+                    </a>
+                    <div class="content">
+                        <div class = "extra">
+                            <div>Average rating:</div>
+                            <i class="star icon"></i>
+                            <i class="star icon"></i>
+                            <i class="star icon"></i>
+                            <i class="star icon"></i>
+                            <i class="star half empty icon"></i>
+                        </div>
+                        <br/>
+                        <a class="black header"><h2>The Imitation Game</h2></a>
+                        <div class="description">
+                            <div class="header"><h3>Director:</h3></div>
+                            <a class="black header"><h5>Morten Tyldum</h5></a>
+                            <br/>
+                            <p>During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="ui small image">
+                      <img src = "{% static 'img/MonstersInc.jpg' %}" />
+                    </a>
+                    <div class="content">
+                        <div class = "extra">
+                            <div>Average rating:</div>
+                            <i class="star icon"></i>
+                            <i class="star icon"></i>
+                            <i class="star icon"></i>
+                            <i class="star icon"></i>
+                            <i class="star empty icon"></i>
+                        </div>
+                        <br/>
+                        <a class="black header"><h2>Monsters University</h2></a>
+                        <div class="description">
+                            <div class="header"><h3>Director:</h3></div>
+                            <a class="black header"><h5>Dan Scanlon</h5></a>
+                            <br/>
+                            <p>A look at the relationship between Mike and Sulley during their days at Monsters University -- when they weren't necessarily the best of friends.</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
+            Users
+        </div>
+    </article>
+
+{% endblock %}
