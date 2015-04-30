@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33fab3b7-67d8-4d5a-adc0-84c25e3b7732" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/search.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/movie_profile.html" afterPath="$PROJECT_DIR$/templates/movie_profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebProject/urls.py" afterPath="$PROJECT_DIR$/WebProject/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebProject.iws" />
@@ -87,8 +83,8 @@
       <file leaf-file-name="search.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3529412" vertical-offset="0" max-vertical-offset="495">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="495">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -634,7 +630,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430377602993</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Movie tab of search nearly completed, it needs my peer's comments :)">
+      <created>1430391884707</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1430391884707</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -696,7 +698,8 @@
     <MESSAGE value="chat dialog added" />
     <MESSAGE value="chat dialog fixed, scroll remained" />
     <MESSAGE value="chat optimized, star icon changed to heart, successful reset msg added" />
-    <option name="LAST_COMMIT_MESSAGE" value="chat optimized, star icon changed to heart, successful reset msg added" />
+    <MESSAGE value="Movie tab of search nearly completed, it needs my peer's comments :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Movie tab of search nearly completed, it needs my peer's comments :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1104,8 +1107,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/search.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3529412" vertical-offset="0" max-vertical-offset="495">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="495">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding />
         </state>
       </provider>
