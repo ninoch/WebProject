@@ -25,3 +25,10 @@
     width: 25%;
 }
 
+#main_block .cards{
+    padding-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 20px;
+}
+

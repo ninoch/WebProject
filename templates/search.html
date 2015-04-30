@@ -9,7 +9,16 @@
 {% block js %}
     {{ block.super }}
     <script>
-        $('#main_block .menu .item').tab();
+        $('#main_block .large.message').hide();
+        $('#main_block .large.message').fadeIn(1000);
+        $('#main_block .menu .item').tab().click(function(){
+            $('#main_block .large.message').hide();
+            $('#main_block .large.message').fadeIn(1000);
+        });
+
+    </script>
+    <script>
+        $('.special.cards .image').dimmer({ on: 'hover'});
     </script>
 ;
 {% endblock %}
@@ -22,7 +31,7 @@
         </div>
         <div class="ui bottom attached active tab segment" data-tab="first">
             <div class="ui floating blue large message">
-              <p>2 matches result found</p>
+              <p>2 match results found</p>
             </div>
              <div class="ui divided items">
                 <div class="item">
@@ -74,7 +83,158 @@
              </div>
         </div>
         <div class="ui bottom attached tab segment" data-tab="second">
-            Users
+            <div class="ui floating blue large message">
+              <p>8 match results found</p>
+            </div>
+            <div class="ui six doubling special cards">
+              <div class="blue card">
+                <div class="dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted button red">Unfollow</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="{% static 'img/Nazanin.jpg' %}">
+                </div>
+                <div class="content">
+                  <a class="header">Nazanin AlipourFard</a>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    1 Follower
+                  </a>
+                </div>
+              </div>
+              <div class="blue card">
+                <div class="dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted button red">Unfollow</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="{% static 'img/Nazanin.jpg' %}">
+                </div>
+                <div class="content">
+                  <a class="header">Nazanin AlipourFard</a>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    1 Follower
+                  </a>
+                </div>
+              </div>
+              <div class="blue card">
+                <div class="dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted button blue">Follow</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="{% static 'img/Nazanin.jpg' %}">
+                </div>
+                <div class="content">
+                  <a class="header">Nazanin AlipourFard</a>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    1 Follower
+                  </a>
+                </div>
+              </div>
+              <div class="blue card">
+                <div class="dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted button blue">Follow</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="{% static 'img/Nazanin.jpg' %}">
+                </div>
+                <div class="content">
+                  <a class="header">Nazanin AlipourFard</a>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    1 Follower
+                  </a>
+                </div>
+              </div>
+              <div class="blue card">
+                <div class="dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted button blue">Follow</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="{% static 'img/Nazanin.jpg' %}">
+                </div>
+                <div class="content">
+                  <a class="header">Nazanin AlipourFard</a>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    1 Follower
+                  </a>
+                </div>
+              </div>
+              <div class="blue card">
+                <div class="dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted button blue">Follow</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="{% static 'img/Nazanin.jpg' %}">
+                </div>
+                <div class="content">
+                  <a class="header">Nazanin AlipourFard</a>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    1 Follower
+                  </a>
+                </div>
+              </div>
+              <div class="blue card">
+                <div class="dimmable image">
+                  <div class="ui dimmer">
+                    <div class="content">
+                      <div class="center">
+                        <div class="ui inverted button blue">Follow</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="{% static 'img/Nazanin.jpg' %}">
+                </div>
+                <div class="content">
+                  <a class="header">Nazanin AlipourFard</a>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    1 Follower
+                  </a>
+                </div>
+              </div>
+            </div>
         </div>
     </article>
 
