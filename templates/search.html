@@ -19,6 +19,26 @@
     </script>
     <script>
         $('.special.cards .image').dimmer({ on: 'hover'});
+        $('.inverted.button.blue').one("click", function(){
+            var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).text();
+            following = parseInt(following);
+            following ++;
+            console.log(following);
+            var news ='<i class="users icon"></i>'.concat(following, ' Follower');
+            $(this).parent().parent().parent().parent().next().next().children().eq(0).remove();
+            $(this).parent().parent().parent().parent().next().next().append(news);
+            $(this).removeClass('blue').addClass('red').text('Unfollow');
+        });
+        $('.inverted.button.red').one("click", function(){
+            var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).text();
+            following = parseInt(following);
+            following --;
+            console.log(following);
+            var news ='<i class="users icon"></i>'.concat(following, ' Follower');
+            $(this).parent().parent().parent().parent().next().next().children().eq(0).remove();
+            $(this).parent().parent().parent().parent().next().next().append(news);
+            $(this).removeClass('red').addClass('blue').text('Follow');
+        });
     </script>
 ;
 {% endblock %}

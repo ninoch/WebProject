@@ -23,6 +23,7 @@
 
 .items .item > .image{
     width: 25%;
+    border-radius: 10px;
 }
 
 #main_block .cards{
