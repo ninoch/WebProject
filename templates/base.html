@@ -203,8 +203,24 @@
 
 			</div>
 		</div>
-        <div class = "chat_window">
-			<div class="ui action input">
+        <div class = "chat_window card items link divided">
+            <div class="header">
+				<div class="ui green empty circular label"></div>
+				<span>Nazanin AlipourFard</span>
+			</div>
+            <div class = "item">
+				<div class="my_content">
+					<div class="ui content message">
+					  <img class="ui avatar image" src="{% static 'img/Nazanin.jpg' %}">
+					  <div class="header">Nazanin</div>
+                      <br/>
+                      <div class="description">
+						<p>Salam khoobi? chera inghad kondi? haaa? haaa? haaa? :D</p>
+                      </div>
+                    </div>
+				</div>
+            </div>
+            <div class="ui action input">
 			  <input placeholder="Enter your text..." type="text">
 			  <button class="ui icon button">
 				<i class="send icon"></i>
@@ -225,7 +241,18 @@
 		<script src="{% static 'lib/Semantic/dist/jquery.js' %}"></script>
 		<script src="{% static 'lib/Semantic/dist/jquery.address.min.js' %}"></script>
 		<script src="{% static 'lib/Semantic/dist/semantic.js' %}"></script>
-		<script>
+        <script>
+        	$('button.ui.icon.button').click(function(){
+				var msg = $(this).prev().val();
+                if(msg!=""){
+                    var msg_div = '<div class="my_content"> <div class="ui content message"> <img class="ui avatar image" src="{% static 'img/Milad.jpg' %}"><div class="header">Milad</div><br/><div class="description"><p>'.concat(msg, '</p></div></div></div>');
+            		$(this).parent().prev().append(msg_div);
+                    $(this).prev().val("");
+                }
+                console.log(msg);
+            });
+        </script>
+        <script>
 			$('.ui.dropdown').dropdown();
 			$('.special.cards .image').dimmer({
 			  on: 'hover'

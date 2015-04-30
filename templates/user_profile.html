@@ -52,12 +52,13 @@
                 $(this).parent().parent().prev().prev().children().eq(0).html(cmn);
             	$(this).prev().children().eq(0).val("");
         	}
-            /*
-            HERE FOR MILAD :D
+			/* For Milad
             else {
-                $(this).prev().children(':first').prompt("khar");
+				$(this).prev().children(':first').border.backgroundColor = 'red';
             }
             */
+
+
         });
     	$('.likeThis').click(function(event){
 			var blk = $(this).parent().parent().children().eq(3).children().eq(1).children().eq(0).html();
@@ -84,7 +85,7 @@
 		<i class="browser icon"></i>
 		Merlion
 	</h3>
-	<img src = "{% static 'img/milad.jpg' %}" />
+	<img src = "{% static 'img/Milad.jpg' %}" />
 	<div class="ui raised segment">
 		<h4>
 		<i class="info circle icon"></i>
@@ -183,7 +184,7 @@
 
 						<form class="ui reply form">
 							<div class="field">
-								<textarea></textarea>
+								<textarea placeholder="Write your comment..."></textarea>
 							</div>
 							<div class="ui blue labeled submit icon button addComment">
 								<i class="icon edit"></i> Add Reply
@@ -298,7 +299,7 @@
 
 						<form class="ui reply form">
 							<div class="field">
-								<textarea></textarea>
+								<textarea placeholder="Write your comment..."></textarea>
 							</div>
 							<div class="ui blue labeled submit icon button addComment">
 								<i class="icon edit"></i> Add Reply
@@ -419,7 +420,7 @@
 
 						<form class="ui reply form">
 							<div class="field">
-								<textarea></textarea>
+								<textarea placeholder="Write your comment..."></textarea>
 							</div>
 							<div class="ui blue labeled submit icon button addComment">
 								<i class="icon edit"></i> Add Reply

@@ -32,6 +32,8 @@ body {
 	background-color: #2B547E;
 	left: 0px;
 	width: 80%;
+	position: fixed;
+	z-index: 50;
 }
 
 #main_block {
@@ -60,12 +62,14 @@ body {
 	height: 180px;
 }
 
+/*
 .chat_window{
 	height: 200px;
 	width: 150px;
 	z-index: 49;
 	background-color: #b2b2b2;
 }
+*/
 
 /*for size of friend suggestion*/
 .ui.one.cards > .blue.card.my_card {
@@ -78,3 +82,41 @@ body {
 	height: 110px;
 }
 /******************************/
+.chat_window{
+	width: 200px;
+	position: fixed;
+	z-index: 55;
+	bottom: -0px;
+	left: 1px;
+	margin-bottom: 0px;
+	border: solid #2B547E 2px;
+}
+
+.chat_window.card .item{
+	height: 80%;
+}
+.chat_window .action.input{
+	width: 100%;
+	margin-top: 0px;
+}
+.chat_window .content.message{
+	margin-bottom: 0px;
+}
+.chat_window .my_content{
+
+}
+.chat_window > .header{
+	background-color: #2B547E;
+}
+/*
+.chat_window .item > .header span{
+	text: #ffffff;
+}
+*/
+
+.chat_window .my_content .header{
+	float: left;
+}
+.chat_window .my_content img{
+	float: left;
+}
