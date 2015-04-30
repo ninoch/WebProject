@@ -42,6 +42,7 @@
 
     	$('.addComment').click(function(event){
             var txt = $(this).prev().children().eq(0).val();
+            $(this).prev().children().eq(0).css("box-shadow","");
             if(txt != "") {
 				var blk = '<div class="comment"> <a class="avatar"> <img src="{% static 'img/anon.png' %}"> </a> <div class="content"> <a class="author"> You </a> <div class="metadata"> <span class="date">Just now</span> </div> <div class="text">'.concat(txt, '</div></div></div>');
             	$(this).parent().before(blk);
@@ -52,11 +53,9 @@
                 $(this).parent().parent().prev().prev().children().eq(0).html(cmn);
             	$(this).prev().children().eq(0).val("");
         	}
-			/* For Milad
             else {
-				$(this).prev().children(':first').border.backgroundColor = 'red';
+				$(this).prev().children().eq(0).css("box-shadow","0px 0px 1px 1px rgba(255, 0, 0, 0.8) inset");
             }
-            */
 
 
         });
