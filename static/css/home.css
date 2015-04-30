@@ -1,0 +1,21 @@
+.likeThis {
+    float: right;
+}
+
+.userimg {
+    float: right;
+	height: 100%;
+	border: solid 1px #2B547E;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+}
+.userinfo {
+    float: left;
+    width: 25%;
+}
+
+.postinfo {
+    float: right;
+    width: 70%;
+}

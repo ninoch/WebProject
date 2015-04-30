@@ -1,0 +1,19 @@
+.follow {
+    float: right;
+    width: 20%;
+}
+
+.unfollow {
+    float: right;
+    width: 20%;
+}
+
+#main_block {
+	float: left;
+	width: 75%;
+	padding: 20px;
+	border: solid 1px #2B547E;
+	border-radius: 5px;
+	margin-left: 2%;
+	background-color: rgba(255, 255, 255, 0.45);
+}
