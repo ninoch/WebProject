@@ -82,7 +82,7 @@
 						  <div class="item">
 							<img class="ui avatar image" src="{% static 'img/Nazanin.jpg' %}">
 							<div class="content">
-							  <div class="header">Nazanin Alipourfard
+							  <div class="header"><span>Nazanin Alipourfard</span>
                                 <div class="ui red circular label">
 								  3
 								</div>
@@ -93,7 +93,7 @@
 						  <div class="item">
 							<img class="ui avatar image" src="{% static 'img/Milad.jpg' %}">
 							<div class="content">
-							  <div class="header">Milad Asgari</div>
+							  <div class="header"><span>Milad Asgari</span></div>
 							</div>
 						  </div>
 						</div>
@@ -219,7 +219,8 @@
 				<div class="my_content">
 					<div class="ui content message">
 					  <img class="ui avatar image" src="{% static 'img/Nazanin.jpg' %}">
-					  <div class="header">Nazanin</div>
+					  <div class="header">Nazanin:</div>
+                      <br/>
                       <br/>
                       <div class="description">
 						<p>Salam khoobi? chera inghad kondi? haaa? haaa? haaa? :D</p>
@@ -252,7 +253,7 @@
         	$('button.ui.icon.button').click(function(){
 				var msg = $(this).prev().val();
                 if(msg!=""){
-                    var msg_div = '<div class="my_content"> <div class="ui content message"> <img class="ui avatar image" src="{% static 'img/Milad.jpg' %}"><div class="header">Milad</div><br/><div class="description"><p>'.concat(msg, '</p></div></div></div>');
+                    var msg_div = '<div class="my_content"> <div class="ui content message"> <img class="ui avatar image" src="{% static 'img/Milad.jpg' %}"><div class="header">Milad</div><br/><br/><div class="description"><p>'.concat(msg, '</p></div></div></div>');
             		$(this).parent().prev().append(msg_div);
                     $(this).prev().val("");
                 }
@@ -310,7 +311,15 @@
         <script>
         $('.chat_window').hide();
         $('#chats .item').click(function(){
-			 $('.chat_window').show();
+            $('.chat_window').show();
+            var img= $(this).children().eq(0).attr("src");
+            var all_name = $(this).children().eq(1).children().eq(0).children().eq(0).text();
+            var first_name = all_name.split(" ");
+            first_name = first_name[0];
+            console.log(first_name);
+            $('.chat_window .header span').text(all_name);
+            $('.chat_window').children().eq(1).children().eq(0).children().eq(0).children().eq(0).attr("src", img);
+            $('.chat_window').children().eq(1).children().eq(0).children().eq(0).children().eq(1).text(first_name+':');
         });
         </script>
 		{% endblock %}
