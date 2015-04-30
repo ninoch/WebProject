@@ -108,6 +108,9 @@ body {
 .chat_window > .header{
 	background-color: #2B547E;
 }
+.chat_window > .header .label{
+	background-color: #2B547E;
+}
 /*
 .chat_window .item > .header span{
 	text: #ffffff;

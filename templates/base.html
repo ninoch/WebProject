@@ -207,6 +207,9 @@
             <div class="header">
 				<div class="ui green empty circular label"></div>
 				<span>Nazanin AlipourFard</span>
+                <div id="close" class="ui label">
+				  <i class="delete icon"></i>
+				</div>
 			</div>
             <div class = "item">
 				<div class="my_content">
@@ -249,7 +252,9 @@
             		$(this).parent().prev().append(msg_div);
                     $(this).prev().val("");
                 }
-                console.log(msg);
+            });
+        	$('#close').click(function(){
+                $('.chat_window').hide();
             });
         </script>
         <script>
