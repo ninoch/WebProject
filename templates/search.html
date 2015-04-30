@@ -19,22 +19,22 @@
     </script>
     <script>
         $('.special.cards .image').dimmer({ on: 'hover'});
-        $('.inverted.button.blue').one("click", function(){
+        $('.ui.inverted.button.blue').one("click", function(){
             var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).text();
             following = parseInt(following);
             following ++;
             console.log(following);
-            var news ='<i class="users icon"></i>'.concat(following, ' Follower');
+            var news ='<i class="users icon"></i> '.concat(following, ' Follower');
             $(this).parent().parent().parent().parent().next().next().children().eq(0).remove();
             $(this).parent().parent().parent().parent().next().next().append(news);
             $(this).removeClass('blue').addClass('red').text('Unfollow');
         });
-        $('.inverted.button.red').one("click", function(){
+        $('.ui.inverted.button.red').one("click", function(){
             var following=$(this).parent().parent().parent().parent().next().next().children().eq(0).text();
             following = parseInt(following);
             following --;
             console.log(following);
-            var news ='<i class="users icon"></i>'.concat(following, ' Follower');
+            var news ='<i class="users icon"></i> '.concat(following, ' Follower');
             $(this).parent().parent().parent().parent().next().next().children().eq(0).remove();
             $(this).parent().parent().parent().parent().next().next().append(news);
             $(this).removeClass('red').addClass('blue').text('Follow');
@@ -104,7 +104,7 @@
         </div>
         <div class="ui bottom attached tab segment" data-tab="second">
             <div class="ui floating blue large message">
-              <p>8 match results found</p>
+              <p>7 match results found</p>
             </div>
             <div class="ui six doubling special cards">
               <div class="blue card">
@@ -120,6 +120,7 @@
                 </div>
                 <div class="content">
                   <a class="header">Nazanin AlipourFard</a>
+                  <div class="header">23 Years</div>
                 </div>
                 <div class="extra content">
                   <a>
