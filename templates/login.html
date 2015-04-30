@@ -53,6 +53,11 @@
 					        <i class="at icon"></i>
 					    </div>
 					</div>
+                    <div id ="success_msg" class="ui success message">
+					  <div class="header">
+						A confirmation link sent to your mail successfully.
+					  </div>
+					</div>
 					<div id="buttons" class="ui large buttons">
 					  <a href="#fliper"><div class="ui teal button">Back</div></a>
 					  <div class="or"></div>
@@ -66,6 +71,12 @@
 	<script src="{% static 'lib/Semantic/dist/jquery.address.min.js' %}"></script>
 	<script src="{%  static 'lib/Semantic/dist/semantic.js'  %}"></script>
 	<script>
+        $('#success_msg').hide();
+        $('div.ui.button').click(function(){
+        	$('#success_msg').show();
+        });
+    </script>
+    <script>
 
 	  (function ($) {
 	    $('.ui.form').form({        
