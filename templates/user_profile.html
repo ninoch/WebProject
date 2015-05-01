@@ -32,10 +32,16 @@
         });
 
     	$('#follow').click(function(event){
+            var num = parseInt($('#follow').prev().prev().prev().prev().prev().children().eq(0).html());
+            num ++;
+			$('#follow').prev().prev().prev().prev().prev().children().eq(0).html(num);
             $('#follow').hide();
             $('#unfollow').show();
         });
     	$('#unfollow').click(function(event){
+            var num = parseInt($('#follow').prev().prev().prev().prev().prev().children().eq(0).html());
+            num --;
+			$('#follow').prev().prev().prev().prev().prev().children().eq(0).html(num);
             $('#unfollow').hide();
             $('#follow').show();
         });
