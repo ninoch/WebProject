@@ -11,7 +11,7 @@
     {{ block.super }}
     <script>
         $('.ui.rating').rating();
-    	$('#unfollow').hide();
+    	$('#follow').hide();
         $('.ui.modal').modal({
             detachable: false
         });
@@ -154,20 +154,18 @@
 			</div>
 			<div class="content">
 				<h2 class="header">
-                    The Imitation Game
-
-                    <div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
-
-                    <br/>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="half empty star icon"></i>
-
+                    	The Imitation Game
+                    	<div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
+						<br/>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="half empty star icon"></i>
+                    	(9 / 10)
                 </h2>
 				<div class="meta">
-					<span>28 April 2015 at 10:48 PM</span>
+					<span><a href="{% url 'post' %}"> 28 April 2015 at 10:48 PM </a></span>
 				</div>
 				<div class="description">
 					<p>
@@ -175,6 +173,7 @@
                     </p>
 				</div>
 				<div class="extra">
+
                     <a class="showComments">
 						<span>0 Comments</span>
                     	<i class ="icon comment"></i>
@@ -185,11 +184,12 @@
                     </a>
                     <!-- Comments -->
 					<div class="ui comments">
+                        <br/>
 						<h3 class="ui dividing header">Comments</h3>
 
 						<form class="ui reply form">
 							<div class="field">
-								<textarea placeholder="Write your comment..."></textarea>
+								<textarea></textarea>
 							</div>
 							<div class="ui blue labeled submit icon button addComment">
 								<i class="icon edit"></i> Add Reply
@@ -225,7 +225,7 @@
 				<h2 class="header">
                     Adventures of Sherlock Holmes
 
-                    <div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
+                    <div class="ui huge heart rating likeThis" data-rating="1" data-max-rating="1"></div>
 
                     <br/>
                     <i class="star icon"></i>
@@ -233,9 +233,10 @@
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
+                    (10 / 10)
                 </h2>
 				<div class="meta">
-					<span>20 April 2015 at 09:50 AM</span>
+					<span><a href="{% url 'post' %}"> 20 April 2015 at 09:50 AM</a></span>
 				</div>
 				<div class="description">
 					<p>
@@ -253,6 +254,7 @@
 					</a>
                     <!-- Comments -->
 					<div class="ui comments">
+                        <br/>
 						<h3 class="ui dividing header">Comments</h3>
 						<div class="comment">
 							<a class="avatar">
@@ -304,7 +306,7 @@
 
 						<form class="ui reply form">
 							<div class="field">
-								<textarea placeholder="Write your comment..."></textarea>
+								<textarea></textarea>
 							</div>
 							<div class="ui blue labeled submit icon button addComment">
 								<i class="icon edit"></i> Add Reply
@@ -353,7 +355,7 @@
 			</div>
 		</div>
 
-    	<hr/>
+        <hr/>
 
 		<div class="item">
 			<div class="image">
@@ -363,7 +365,7 @@
 				<h2 class="header">
                     Monsters University
 
-                    <div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
+                    <div class="ui huge heart rating likeThis" data-rating="1" data-max-rating="1"></div>
 
                     <br/>
                     <i class="star icon"></i>
@@ -371,9 +373,10 @@
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="empty star icon"></i>
+                    (9 / 10)
                 </h2>
 				<div class="meta">
-					<span>10 April 2015 at 02:05 PM</span>
+					<span><a href="{% url 'post' %}"> 10 April 2015 at 02:05 PM</a></span>
 				</div>
 				<div class="description">
 					<p>
@@ -392,6 +395,7 @@
 
                     <!-- Comments -->
 					<div class="ui comments">
+                        <br/>
 						<h3 class="ui dividing header">Comments</h3>
 						<div class="comment">
 							<a class="avatar">
@@ -425,7 +429,7 @@
 
 						<form class="ui reply form">
 							<div class="field">
-								<textarea placeholder="Write your comment..."></textarea>
+								<textarea></textarea>
 							</div>
 							<div class="ui blue labeled submit icon button addComment">
 								<i class="icon edit"></i> Add Reply
@@ -467,5 +471,4 @@
 			</div>
 		</div>
     </div>
-
 {% endblock %}

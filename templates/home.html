@@ -51,15 +51,10 @@
                 $(this).parent().parent().prev().prev().children().eq(0).html(cmn);
             	$(this).prev().children().eq(0).val("");
         	}
-            /*
-            HERE FOR MILAD :D
-            else {
-                $(this).prev().children(':first').prompt("khar");
-            }
-            */
         });
     	$('.likeThis').click(function(event){
-			var blk = $(this).parent().parent().children().eq(3).children().eq(1).children().eq(0).html();
+			var blk = $(this).parent().parent().children().eq(3).children().eq(2).children().eq(0).html();
+            console.log(blk);
             var num = parseInt(blk.split(' ')[0], 10);
             if($(this).rating('get rating') == 1){
                 num++;
@@ -69,7 +64,7 @@
             }
             console.log(num);
             blk = num + " Likes";
-            $(this).parent().parent().children().eq(3).children().eq(1).children().eq(0).html(blk);
+            $(this).parent().parent().children().eq(3).children().eq(2).children().eq(0).html(blk);
         });
     </script>
 {% endblock %}
@@ -88,20 +83,18 @@
 			</div>
 			<div class="content">
 				<h2 class="header">
-                    The Imitation Game
-
-                    <div class="ui huge star rating likeThis" data-rating="0" data-max-rating="1"></div>
-
-                    <br/>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="half empty star icon"></i>
-
+                    	The Imitation Game
+                    	<div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
+						<br/>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="half empty star icon"></i>
+                    	(9 / 10)
                 </h2>
 				<div class="meta">
-					<span>28 April 2015 at 10:48 PM</span>
+					<span><a href="{% url 'post' %}"> 28 April 2015 at 10:48 PM </a></span>
 				</div>
 				<div class="description">
 					<p>
@@ -109,6 +102,12 @@
                     </p>
 				</div>
 				<div class="extra">
+
+                    <div class="right floated author">
+      					<img class="ui avatar image" src="{% static 'img/Milad.jpg' %}">
+                        <a href = "{% url 'user_profile' %}" > Merlion </a>
+                    </div>
+
                     <a class="showComments">
 						<span>0 Comments</span>
                     	<i class ="icon comment"></i>
@@ -119,6 +118,7 @@
                     </a>
                     <!-- Comments -->
 					<div class="ui comments">
+                        <br/>
 						<h3 class="ui dividing header">Comments</h3>
 
 						<form class="ui reply form">
@@ -159,7 +159,7 @@
 				<h2 class="header">
                     Adventures of Sherlock Holmes
 
-                    <div class="ui huge star rating likeThis" data-rating="0" data-max-rating="1"></div>
+                    <div class="ui huge heart rating likeThis" data-rating="1" data-max-rating="1"></div>
 
                     <br/>
                     <i class="star icon"></i>
@@ -167,9 +167,10 @@
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="star icon"></i>
+                    (10 / 10)
                 </h2>
 				<div class="meta">
-					<span>20 April 2015 at 09:50 AM</span>
+					<span><a href="{% url 'post' %}"> 20 April 2015 at 09:50 AM</a></span>
 				</div>
 				<div class="description">
 					<p>
@@ -177,6 +178,10 @@
                     </p>
 				</div>
 				<div href ="#" class="extra">
+                    <div class="right floated author">
+      					<img class="ui avatar image" src="{% static 'img/Milad.jpg' %}">
+                        <a href = "{% url 'user_profile' %}" > Merlion </a>
+                    </div>
                     <a class ="showComments">
 						<span>3 Comments</span>
                     	<i class ="icon comment"></i>
@@ -187,6 +192,7 @@
 					</a>
                     <!-- Comments -->
 					<div class="ui comments">
+                        <br/>
 						<h3 class="ui dividing header">Comments</h3>
 						<div class="comment">
 							<a class="avatar">
@@ -289,6 +295,87 @@
 
     	<hr/>
 
+
+		<div class="item">
+			<div class="image">
+				<img src="{% static 'img/TheoryOfEverything.jpg'%}">
+			</div>
+			<div class="content">
+				<h2 class="header">
+                    	Theory Of Everything
+                    	<div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
+						<br/>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+						<i class="star icon"></i>
+                    	(10 / 10)
+                </h2>
+				<div class="meta">
+					<span><a href="{% url 'post' %}"> 13 April 2015 at 10:48 PM</a></span>
+				</div>
+				<div class="description">
+					<p>
+                        A theory of everything (ToE) or final theory, ultimate theory, or master theory is a hypothetical single, all-encompassing, coherent theoretical framework of physics that fully explains and links together all physical aspects of the universe.[1]:6 Finding a ToE is one of the major unsolved problems in physics. Over the past few centuries, two theoretical frameworks have been developed that, as a whole, most closely resemble a ToE. The two theories upon which all modern physics rests are general relativity (GR) and quantum field theory (QFT). GR is a theoretical framework that only focuses on the force of gravity for understanding the universe in regions of both large-scale and high-mass: stars, galaxies, clusters of galaxies, etc. On the other hand, QFT is a theoretical framework that only focuses on three non-gravitational forces for understanding the universe in regions of both small scale and low mass: sub-atomic particles, atoms, molecules, etc. QFT successfully implemented the Standard Model and unified the interactions (so-called Grand Unified Theory) between the three non-gravitational forces: weak, strong, and electromagnetic force.
+                    </p>
+				</div>
+				<div class="extra">
+
+                    <div class="right floated author">
+      					<img class="ui avatar image" src="{% static 'img/Nazanin.jpg' %}">
+                        <a href = "{% url 'user_profile' %}" > Ninoch </a>
+                    </div>
+
+                    <a class="showComments">
+						<span>0 Comments</span>
+                    	<i class ="icon comment"></i>
+                    </a>
+                    <a class="showLikes">
+                    	<span>1 Likes</span>
+                    	<i class="icon thumbs up"></i>
+                    </a>
+                    <!-- Comments -->
+					<div class="ui comments">
+                        <br/>
+						<h3 class="ui dividing header">Comments</h3>
+
+						<form class="ui reply form">
+							<div class="field">
+								<textarea></textarea>
+							</div>
+							<div class="ui blue labeled submit icon button addComment">
+								<i class="icon edit"></i> Add Reply
+							</div>
+						</form>
+					</div>
+
+                    <!--- Likes -->
+					<div class="ui small modal">
+						<i class="close icon"></i>
+						<div class="header">
+							<i class="film icon"></i>
+							Ninoch's Post Likes
+						</div>
+						<div class="content">
+							<div class="ui divided list">
+								<div class="item">
+									<img class="ui avatar image" src="{% static 'img/anon.png'%}">
+									<div class="content">
+										<a class="header">Daniel Louise</a>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="actions">
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <hr/>
+
 		<div class="item">
 			<div class="image">
 				<img src="{% static 'img/MonstersInc.jpg'%}">
@@ -297,7 +384,7 @@
 				<h2 class="header">
                     Monsters University
 
-                    <div class="ui huge star rating likeThis" data-rating="0" data-max-rating="1"></div>
+                    <div class="ui huge heart rating likeThis" data-rating="1" data-max-rating="1"></div>
 
                     <br/>
                     <i class="star icon"></i>
@@ -305,9 +392,10 @@
                     <i class="star icon"></i>
                     <i class="star icon"></i>
                     <i class="empty star icon"></i>
+                    (9 / 10)
                 </h2>
 				<div class="meta">
-					<span>10 April 2015 at 02:05 PM</span>
+					<span><a href="{% url 'post' %}"> 10 April 2015 at 02:05 PM</a></span>
 				</div>
 				<div class="description">
 					<p>
@@ -315,6 +403,10 @@
                     </p>
 				</div>
 				<div class="extra">
+                    <div class="right floated author">
+      					<img class="ui avatar image" src="{% static 'img/Milad.jpg' %}">
+                        <a href = "{% url 'user_profile' %}" > Merlion </a>
+                    </div>
                     <a class ="showComments">
                         <span>2 Comments</span>
                     	<i class ="icon comment"></i>
@@ -326,6 +418,7 @@
 
                     <!-- Comments -->
 					<div class="ui comments">
+                        <br/>
 						<h3 class="ui dividing header">Comments</h3>
 						<div class="comment">
 							<a class="avatar">

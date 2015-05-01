@@ -4,18 +4,13 @@
 
 .userimg {
     float: right;
-	height: 100%;
-	border: solid 1px #2B547E;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 5px;
 }
 .userinfo {
-    float: left;
-    width: 25%;
+    float: right;
+    width: 50%;
 }
 
-.postinfo {
-    float: right;
-    width: 70%;
+.movieinfo {
+    float: left;
+    width: 50%;
 }
