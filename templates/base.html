@@ -320,7 +320,10 @@
         	//$("#chat_select").sidebar('attach events', '#movies');
 		</script>
         <script>
-        $('.chat_window').hide();
+        $(document).ready(function(){
+            $('.chat_window').hide();
+        });
+
         $('#chats .item').click(function(){
             $('.chat_window').show();
             var img= $(this).children().eq(0).attr("src");
