@@ -4,11 +4,27 @@
 {% block css %}
     {{ block.super }}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/tooltipster.css' %}">
 {% endblock %}
 
 {% block js %}
     {{ block.super }}
+
+	<script src="{% static 'js/jquery.tooltipster.js' %}"></script>
+	<script src="{% static 'js/jquery.tooltipster.min.js' %}"></script>
+
     <script>
+    	$(document).ready(function() {
+            console.log('salam');
+            $('.tooltip').tooltipster();
+        	$('.postTitle').tooltipster({
+            	content: $('<i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="empty star icon"></i>  ( 8.1 / 10 ) ' +
+                '<table class="ui inverted basic table"> <thead> </thead> <tbody> ' +
+                '<tr> <td> Director: </td> <td> Morten Tyldum </td> </tr> ' +
+                '<tr><td>Writers:</td> <td> <div class="ui list"> <div class="item"> Graham Moore </div> <div class="item"> Andrew Hodges </div> </div></td></tr>' +
+                '</tbody> </table>')
+        	});
+        });
         $('.ui.rating').rating();
     	$('#unfollow').hide();
         $('.ui.modal').modal({
@@ -79,11 +95,11 @@
 	<div class="ui items">
 		<div class="item">
 			<div class="image">
-				<img src="{% static 'img/TheImitationGame.jpg'%}">
+				<img class="tooltip" title="This is my image's tooltip message!" src="{% static 'img/TheImitationGame.jpg'%}">
 			</div>
 			<div class="content">
 				<h2 class="header">
-                    	The Imitation Game
+                    	<span class="postTitle">The Imitation Game</span>
                     	<div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
 						<br/>
 						<i class="star icon"></i>
@@ -157,7 +173,7 @@
 			</div>
 			<div class="content">
 				<h2 class="header">
-                    Adventures of Sherlock Holmes
+                    <span class="postTitle">Adventures of Sherlock Holmes</span>
 
                     <div class="ui huge heart rating likeThis" data-rating="1" data-max-rating="1"></div>
 
@@ -302,7 +318,7 @@
 			</div>
 			<div class="content">
 				<h2 class="header">
-                    	Theory Of Everything
+                    	<span class="postTitle"> Theory Of Everything </span>
                     	<div class="ui huge heart rating likeThis" data-rating="0" data-max-rating="1"></div>
 						<br/>
 						<i class="star icon"></i>
@@ -382,7 +398,7 @@
 			</div>
 			<div class="content">
 				<h2 class="header">
-                    Monsters University
+                    <span class="postTitle">Monsters University</span>
 
                     <div class="ui huge heart rating likeThis" data-rating="1" data-max-rating="1"></div>
 
