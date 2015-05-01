@@ -269,8 +269,15 @@
 			});
 		</script>
 		<script>
-			// showing multiple
 
+        	$('#searchText').on('keypress', function(){
+            	if($('#searchText').val()[0] == 'N' && $('#searchText').val()[1] == 'a'){
+                    $('#searchText').val("");
+                    $('#searchText').val('Nazanin AlipourFard');
+            	}
+            });
+
+			// showing multiple
             $('.ui.sidebar')
 			  .sidebar({
 			    context: $('.bottom.segment')
