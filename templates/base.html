@@ -18,42 +18,41 @@
 
 	</head>
 	<body>
-		<div class="ui my inverted menu">
-			<a class="item" href="{% url 'home' %}">
-				<i class="home icon"></i> Home
-			</a>
+        <div class="ui my inverted menu">
+            <a class="item" href="{% url 'home' %}">
+                <i class="home icon"></i> Home
+            </a>
 
-            <a href="{% url 'search' %}">
-			<div class="ui action left icon input">
-				<i class="search icon"></i>
-				<input id="searchText" type="text" placeholder="Search...">
-				<div class="ui teal button">Search</div>
+            <!-- <a href="{% url 'search' %}">  for what? -->
+            <div id="searchfield" class="ui action left icon input">
+                <i class="search icon"></i>
+                <input name="currency" id="autocomplete" class="searchText" type="text" placeholder="Search...">
+                <div class="ui teal button">Search</div>
+            </div>
+            <!-- </a> for what?-->
 
-			</div>
-			</a>
-
-			<div class="right menu">
-				<a class="ui pointing dropdown link item">
-					<i class="alarm icon" tabindex="0"></i>
+            <div class="right menu">
+                <a class="ui pointing dropdown link item">
+                    <i class="alarm icon" tabindex="0"></i>
                     <div class="circular ui teal label">2</div>
-					<div class="menu" tabindex="-1">
-						<div class="item">Notife #1</div>
-						<div class="item">Notife #2</div>
-					</div>
-				</a>
-				
-				<div class="ui pointing dropdown link item" tabindex="-1">
-					<i class="dropdown icon" tabindex="0"></i>
-					<span class="text">Your Name</span>
-					<div class="menu" tabindex="-1">
-						<a href="{% url 'user_profile' %}"><div class="item">Profile</div></a>
-						<div class="item">Settings</div>
-						<div class="divider"></div>
-						<a href="{% url 'login' %}"><div class="item">Logout</div></a>
-					</div>
-				</div>
-			</div>
-		</div>
+                    <div class="menu" tabindex="-1">
+                        <div class="item">Notife #1</div>
+                        <div class="item">Notife #2</div>
+                    </div>
+                </a>
+
+                <div class="ui pointing dropdown link item" tabindex="-1">
+                    <i class="dropdown icon" tabindex="0"></i>
+                    <span class="text">Your Name</span>
+                    <div class="menu" tabindex="-1">
+                        <a href="{% url 'user_profile' %}"><div class="item">Profile</div></a>
+                        <div class="item">Settings</div>
+                        <div class="divider"></div>
+                        <a href="{% url 'login' %}"><div class="item">Logout</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 		
 		<div id="side" class="ui bottom attached segment pushable">
 			<div id="menu_decider" class="ui top inverted attached demo menu">
@@ -252,6 +251,8 @@
 		<script src="{% static 'lib/Semantic/dist/jquery.js' %}"></script>
 		<script src="{% static 'lib/Semantic/dist/jquery.address.min.js' %}"></script>
 		<script src="{% static 'lib/Semantic/dist/semantic.js' %}"></script>
+        <script src="{% static 'lib/Semantic/dist/currency-autocomplete.js' %}"></script>
+        <script src="{% static 'lib/Semantic/dist/jquery.autocomplete.min.js' %}"></script>
         <script>
         	$('button.ui.icon.button').click(function(){
 				var msg = $(this).prev().val();
@@ -272,14 +273,14 @@
 			});
 		</script>
 		<script>
-
+            /*
         	$('#searchText').on('keypress', function(){
             	if($('#searchText').val()[0] == 'N' && $('#searchText').val()[1] == 'a'){
                     $('#searchText').val("");
                     $('#searchText').val('Nazanin AlipourFard');
             	}
             });
-
+            */
 			// showing multiple
             $('.ui.sidebar')
 			  .sidebar({
