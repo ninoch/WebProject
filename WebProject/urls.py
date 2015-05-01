@@ -17,6 +17,6 @@ urlpatterns = patterns('',
     url(r'^user_profile/$', TemplateView.as_view(template_name='user_profile.html'), name="user_profile"),
     url(r'^users_list/$', TemplateView.as_view(template_name='users_list.html'), name="users_list"),
     url(r'^movie_profile/$', TemplateView.as_view(template_name='movie_profile.html')),
-    url(r'^search/$', TemplateView.as_view(template_name='search.html')),
+    url(r'^search/$', TemplateView.as_view(template_name='search.html'), name='search'),
 
 )
